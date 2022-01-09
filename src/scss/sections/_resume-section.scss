@@ -16,6 +16,16 @@ section.resume-section {
     }
 }
 
+span.center {
+    text-align: center;
+}
+
+.img-profile {
+    max-width: 12rem;
+    max-height: 12rem;
+    border: 0.5rem solid fade-out($primary, 0.2);
+}
+
 @include media-breakpoint-up(md) {
     section.resume-section {
         min-height: 100vh;

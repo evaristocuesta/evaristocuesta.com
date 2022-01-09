@@ -5,16 +5,17 @@
 // Styling for the rounded social media links
 
 .social-icons {
+    text-align: center;
     .social-icon {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         height: 3.5rem;
         width: 3.5rem;
-        background-color: $gray-700;
+        background-color: $primary;
         color: $white;
         border-radius: 100%;
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-right: 1.5rem;
 
         &:last-child {
@@ -22,7 +23,8 @@
         }
 
         &:hover {
-            background-color: $primary;
+            background-color: $white;
+            color: $primary;
         }
     }
 }

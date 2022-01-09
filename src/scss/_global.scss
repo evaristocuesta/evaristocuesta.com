@@ -14,6 +14,10 @@ body {
     }
 }
 
+a {
+    text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -21,20 +25,46 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 h1 {
     line-height: 1;
+    text-align: center;
 }
 
 p.lead {
     font-size: 1.15rem;
     font-weight: 400;
+    text-align: justify;
+}
+
+.contact-info {
+    font-family: $headings-font-family;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;    
+}
+
+.profession {
+    font-family: $headings-font-family;
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-align: center;    
+}
+
+.place {
+    font-family: $headings-font-family;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center;    
 }
 
 .subheading {
     font-family: $headings-font-family;
-    text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.5rem;
 }
+
+

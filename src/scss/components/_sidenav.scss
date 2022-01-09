@@ -17,6 +17,31 @@
             outline-color: lighten($primary, 15%);
         }
     }
+
+    .navbar-brand h2 {
+        color: $white;
+    }
+
+    .navbar-brand .name {
+        font-family: $headings-font-family;
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: $white;
+        margin: 0;
+    }
+
+    .navbar-brand .img-brand {
+        max-width: 1.8rem;
+        max-height: 1.8rem;
+    }
+
+    .contact-info {
+        color: $white;
+        a {
+            color: $white;
+        }
+    }
 }
 
 @include media-breakpoint-up(lg) {
@@ -27,7 +52,8 @@
         position: fixed;
         top: 0;
         left: 0;
-
+        background-image: url('../assets/img/sidebar-background.jpg');
+        background-blend-mode: luminosity;
         display: flex;
         flex-direction: column;
 
@@ -37,13 +63,13 @@
         .navbar-brand {
             display: flex;
 
-            margin: auto auto 0;
+            margin: 1rem auto 3rem auto;
             padding: 0.5rem;
 
             .img-profile {
-                max-width: 10rem;
-                max-height: 10rem;
-                border: 0.5rem solid fade-out($white, 0.8);
+                max-width: 15rem;
+                max-height: 15rem;
+                border: 0.5rem solid fade-out($white, 0.6);
             }
         }
 
@@ -59,7 +85,7 @@
                 flex-direction: column;
 
                 width: 100%;
-
+                
                 .nav-item {
                     display: block;
 
