@@ -11297,7 +11297,7 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 0;
-    padding-left: 35%;
+    padding-left: 25rem;
   }
 }
 a {
@@ -11405,7 +11405,7 @@ p.lead {
     background-blend-mode: luminosity;
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 25rem;
     height: 100vh;
   }
   #sideNav .navbar-brand {
@@ -11470,7 +11470,7 @@ section.resume-section {
   padding-right: 1rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  max-width: 75rem;
+  max-width: 60rem;
 }
 section.resume-section .resume-section-content {
   width: 100%;
@@ -11497,5 +11497,11 @@ span.center {
     padding-right: 3rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  hr.section {
+    max-width: 58rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 }
