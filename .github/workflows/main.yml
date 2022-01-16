@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy main
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy
+    name: Deploy main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
