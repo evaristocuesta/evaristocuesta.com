@@ -35,7 +35,6 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 function contactInfo () {
-    console.log('generating contact info');
     const emailAdress = atob('Y29udGFjdEBldmFyaXN0b2N1ZXN0YS5jb20=');
     const emails = document.querySelectorAll('a.email-contact-info');
     emails.forEach(email => {
