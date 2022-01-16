@@ -26,4 +26,21 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    contactInfo();
 });
+
+function contactInfo () {
+    const emailAdress = atob('Y29udGFjdEBldmFyaXN0b2N1ZXN0YS5jb20=');
+    const emails = document.querySelectorAll('a.email-contact-info');
+    emails.forEach(email => {
+        email.children[1].innerHTML = emailAdress;
+        email.setAttribute('href', 'mailto:' + emailAdress);        
+    });
+
+    const phoneNumber = atob('KzM0IDYzNyA1MyA0NSA2MQ==');
+    const phones = document.querySelectorAll('a.phone-contact-info');
+    phones.forEach(phone => {
+        phone.children[1].innerHTML = phoneNumber;
+        phone.setAttribute('href', 'tel:' + phoneNumber);        
+    });
+}
