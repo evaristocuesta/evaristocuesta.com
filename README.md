@@ -1,29 +1,14 @@
-# [Start Bootstrap - Resume](https://startbootstrap.com/theme/resume/)
+# [evaristocuesta.com](https://www.evaristocuesta.com)
 
-[Resume](https://startbootstrap.com/theme/resume/) is a resume and CV theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a fixed sidebar with content sections to build a simple, yet elegant resume.
+Hi all, 
 
-## Preview
+I'm Evaristo and I'm a software developer located in Seville, Spain. This is my website where you can view my CV. 
 
-[![Resume Preview](https://assets.startbootstrap.com/img/screenshots/themes/resume.png)](https://startbootstrap.github.io/startbootstrap-resume/)
+This website is based on [Resume](https://startbootstrap.com/theme/resume/) which is a resume and CV theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). 
 
-**[View Live Preview](https://startbootstrap.github.io/startbootstrap-resume/)**
+If you want, you can fork or clone [this project](https://github.com/evaristocuesta/evaristocuesta.com) and use it as a template for your resume website. 
 
-## Status
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-resume/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-resume.svg)](https://www.npmjs.com/package/startbootstrap-resume)
-[![dependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-resume/status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-resume)
-[![devDependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-resume/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-resume?type=dev)
-
-## Download and Installation
-
-To begin using this template, choose one of the following options to get started:
-
-- [Download the latest release on Start Bootstrap](https://startbootstrap.com/theme/resume/)
-- Install using npm: `npm i startbootstrap-resume`
-- Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-resume.git`
-- [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-resume)
-
+[![Evaristo Cuesta Websiete](./resources/preview.jpg)](https://www.evaristocuesta.com)
 ## Usage
 
 ### Basic Usage
@@ -49,9 +34,11 @@ You must have npm installed in order to use this build environment.
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-resume/issues) here on GitHub or leave a comment on the [theme overview page at Start Bootstrap](https://startbootstrap.com/theme/resume/).
+Have a bug or an issue with this template? [Open a new issue](https://github.com/evaristocuesta/evaristocuesta.com/issues) here on GitHub. 
 
-## About
+## Credits
+
+This website is based on Start BootStrap. 
 
 Start Bootstrap is an open source library of free Bootstrap themes and templates. All of the free themes and templates on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
@@ -66,6 +53,6 @@ Start Bootstrap was created by and is maintained by **[David Miller](https://dav
 
 Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-## Copyright and License
+## License
 
-Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE) license.
+Code released under the [MIT](https://github.com/evaristocuesta/evaristocuesta.com/blob/master/LICENSE) license.
