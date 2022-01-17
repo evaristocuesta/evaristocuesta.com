@@ -12,7 +12,7 @@
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
-    "description": "Resume is a simple, yet elegant resume and CV theme for Bootstrap 4.",
+    "description": "Resume is a simple, yet elegant resume and CV theme for Bootstrap 5.",
     "keywords": [
         "css",
         "sass",
@@ -21,19 +21,20 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/resume",
+    "homepage": "https://www.evaristocuesta.com",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-resume/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "https://github.com/evaristocuesta/evaristocuesta.com/issues",
+        "email": "contact@evaristocuesta.com"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Evaristo Cuesta",
     "contributors": [
+        "Evaristo Cuesta (https://www.evaristocuesta.com)",
         "David Miller (https://davidmiller.io/)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-resume.git"
+        "url": "https://github.com/evaristocuesta/evaristocuesta.com.git"
     },
     "dependencies": {
         "bootstrap": "5.1.3"
