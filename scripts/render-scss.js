@@ -34,9 +34,13 @@ module.exports = function renderSCSS() {
 };
 
 const entryPoint = `/*!
-* Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
-* Copyright 2013-${new Date().getFullYear()} ${packageJSON.author}
-* Licensed under ${packageJSON.license} (https://github.com/StartBootstrap/${packageJSON.name}/blob/master/LICENSE)
+* ${packageJSON.author} (${packageJSON.homepage})
+* Copyright 2020-${new Date().getFullYear()} ${packageJSON.author}
+* Licensed under MIT (https://github.com/evaristocuesta/evaristocuesta.com/blob/master/LICENSE)
+* 
+* Start Bootstrap - Resume v7.0.4 (https://startbootstrap.com/theme/resume)
+* Copyright 2013-2022 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
 @import "${stylesPath}"
 `
