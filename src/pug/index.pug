@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(lang='en', itemscope, itemtype='http://schema.org/WebPage')
 
     head
         // HTML Meta Tags
@@ -61,7 +61,7 @@ html(lang='en')
                     span.name Evaristo Cuesta
                 span.d-none.d-lg-block
                     img.img-fluid.img-profile.rounded-circle.mx-auto.mb-3(src='assets/img/profile.jpg', alt='Evaristo Cuesta')
-                    h2.d-block Evaristo Cuesta
+                    span.name.d-block Evaristo Cuesta
                     span.profession.d-block Software Developer
                     span.place.d-block Seville, Spain
             button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
