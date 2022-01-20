@@ -73,6 +73,16 @@
             }
         }
 
+        .navbar-brand .name {
+            font-family: $headings-font-family;
+            font-weight: 400;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            color: $white;
+            margin: 0;
+            padding: 0;
+        }
+
         .navbar-collapse {
             display: flex;
             align-items: flex-start;
