@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: /cdn-cgi/
+Sitemap: https://www.evaristocuesta.com/sitemap.xml
