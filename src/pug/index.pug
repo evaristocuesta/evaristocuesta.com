@@ -2,6 +2,60 @@ doctype html
 html(lang='en', itemscope, itemtype='http://schema.org/WebPage')
 
     head
+        script(type='application/ld+json').
+            {
+                "@context": "https://schema.org/", 
+                "@type": "BreadcrumbList", 
+                "itemListElement": [{
+                    "@type": "ListItem", 
+                    "position": 1, 
+                    "name": "About",
+                    "item": "https://www.evaristocuesta.com"  
+                },{
+                {
+                    "@type": "ListItem", 
+                    "position": 2, 
+                    "name": "Experience",
+                    "item": "https://www.evaristocuesta.com/#experience"  
+                },{
+                    "@type": "ListItem", 
+                    "position": 3, 
+                    "name": "Education",
+                    "item": "https://evaristocuesta.com/#education"  
+                },{
+                {
+                    "@type": "ListItem", 
+                    "position": 4, 
+                    "name": "Languages",
+                    "item": "https://www.evaristocuesta.com/#languages"  
+                },{
+                {
+                    "@type": "ListItem", 
+                    "position": 5, 
+                    "name": "Interests",
+                    "item": "https://www.evaristocuesta.com/#interests"  
+                }]
+            }
+        script(type='application/ld+json').
+            {
+                "@context": "https://schema.org/",
+                "@type": "Person",
+                "name": "Evaristo Cuesta",
+                "url": "https://www.evaristocuesta.com",
+                "image": "https://evaristocuesta.com/assets/img/profile.jpg",
+                "sameAs": [
+                    "https://twitter.com/evaristocuesta",
+                    "https://www.linkedin.com/in/evaristocuesta",
+                    "https://github.com/evaristocuesta",
+                    "https://www.evaristocuesta.es"
+                ],
+                "jobTitle": "Senior Software Developer",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Schneider Electric"
+                }, 
+                "brand": "Evaristo Cuesta"
+            }
         // HTML Meta Tags
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=yes')
