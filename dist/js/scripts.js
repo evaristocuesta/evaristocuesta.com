@@ -1,6 +1,6 @@
 /*!
 * Evaristo Cuesta (https://www.evaristocuesta.com)
-* Copyright 2020-2022 Evaristo Cuesta
+* Copyright 2020-2023 Evaristo Cuesta
 * Licensed under MIT (https://github.com/evaristocuesta/evaristocuesta.com/blob/master/LICENSE)
 * 
 * Start Bootstrap - Resume v7.0.4 (https://startbootstrap.com/theme/resume)
