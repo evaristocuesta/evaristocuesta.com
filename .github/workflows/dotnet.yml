@@ -38,7 +38,7 @@ jobs:
       working-directory: ./evaristocuesta.com
 
     - name: Generate pages
-      run: dotnet run --launch-profile "Production" --no-restore --configuration Release ssg ${{ github.workspace }}/web     
+      run: dotnet run --launch-profile "Production" --no-restore --configuration Release ssg ${{ github.workspace }}/web evaristocuesta.com    
       working-directory: ./evaristocuesta.com      
 
     - name: Upload artifact
