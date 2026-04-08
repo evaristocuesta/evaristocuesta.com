@@ -38,8 +38,8 @@ jobs:
       working-directory: ./evaristocuesta.com
 
     - name: Generate pages
-      run: dotnet run --launch-profile "Production" --no-restore --configuration Release ssg ../web     
-      working-directory: ./evaristocuesta.com
+      run: dotnet run --launch-profile "Production" --no-restore --configuration Release ssg ${{ github.workspace }}/web     
+      working-directory: ./evaristocuesta.com      
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
