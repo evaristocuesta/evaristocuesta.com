@@ -5,19 +5,22 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+var outputPath = args.Length >= 2 ? $"{args[1]}" : string.Empty;
+var basePath = args.Length == 3 ? $"/{args[2]}" : string.Empty;
+
 if (args.HasSsgArg())
 {
     builder.Services.AddSingleton<IStaticResourcesInfoProvider>(
         new StaticResourcesInfoProvider(
             [
-                new PageResource("/"), 
-                new CssResource("/css/site.css"),
-                new CssResource("/evaristocuesta.com.styles.css"),
-                new JsResource("/js/site.js"), 
-                new BinResource("/images/favicon.ico"),
-                new BinResource("/images/meta-image.jpg"),
-                new BinResource("/images/profile.jpg"),
-                new BinResource("/images/sidebar-background.jpg")
+                new PageResource($"{basePath}/"), 
+                new CssResource($"{basePath}/css/site.css"),
+                new CssResource($"{basePath}/evaristocuesta.com.styles.css"),
+                new JsResource($"{basePath}/js/site.js"), 
+                new BinResource($"{basePath}/images/favicon.ico"),
+                new BinResource($"{basePath}/images/meta-image.jpg"),
+                new BinResource($"{basePath}/images/profile.jpg"),
+                new BinResource($"{basePath}/images/sidebar-background.jpg")
             ]
         ));
 }
@@ -46,8 +49,6 @@ app.MapControllerRoute(
 
 if (args.HasSsgArg())
 {
-    var outputPath = args.Length >= 2 ? $"{args[1]}" : string.Empty;
-
     if (!Path.Exists(outputPath))
     {
         Console.WriteLine($"Creating directory {outputPath}");
