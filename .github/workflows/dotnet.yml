@@ -5,6 +5,12 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  workflow_dispatch:    
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write    
 
 jobs:
   ci-build:
@@ -31,3 +37,12 @@ jobs:
     - name: Generate pages
       run: dotnet run --launch-profile "Production" --no-restore --configuration Release ssg ../../web     
       working-directory: ./evaristocuesta.com
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: 'web'
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4      
