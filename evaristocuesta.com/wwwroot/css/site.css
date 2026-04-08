@@ -1,0 +1,309 @@
+@charset "UTF-8";
+
+:root {
+    --sidebar-base-width: 25rem;
+    --primary: #2b65a3;
+    --primary-hover: #225182;
+    --bs-primary-rgb: 43, 101, 163;
+    --white: #ffffff;
+    --gray-800: #343a40;
+    --gray-600: #6c757d;
+    --headings-font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --bs-body-font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --h1-font-size: 6rem;
+    --h2-font-size: 3.5rem;
+    --h3-font-size: 2rem;
+}
+
+body {
+    padding-top: 3.375rem;
+    color: var(--gray-600);
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 0;
+        padding-left: var(--sidebar-base-width);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: var(--headings-font-family);
+    color: var(--gray-800);
+}
+
+h1 {
+    line-height: 1;
+    text-align: center;
+    font-size: calc(1.725rem + 5.7vw);
+}
+
+h2 {
+    font-size: calc(1.475rem + 2.7vw);
+}
+
+h3 {
+    font-size: calc(1.325rem + 0.9vw);
+}
+
+p.lead {
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.contact-info {
+    font-family: var(--headings-font-family);
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.profession {
+    font-family: var(--headings-font-family);
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.place {
+    font-family: var(--headings-font-family);
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.subheading {
+    font-family: var(--headings-font-family);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--gray-800);
+}
+
+#sideNav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+    #sideNav .navbar-nav .nav-item .nav-link {
+        font-weight: 800;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+
+    #sideNav .navbar-toggler:focus {
+        outline-color: rgba(75, 139, 208, 1);
+    }
+
+    #sideNav .navbar-brand h2,
+    #sideNav .navbar-brand .h2 {
+        color: var(--white);
+    }
+
+    #sideNav .navbar-brand .name {
+        font-family: var(--headings-font-family);
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: var(--white);
+        margin: 0;
+    }
+
+    #sideNav .navbar-brand .img-brand {
+        max-width: 1.8rem;
+        max-height: 1.8rem;
+    }
+
+    #sideNav .contact-info {
+        color: var(--white);
+    }
+
+        #sideNav .contact-info a {
+            color: var(--white);
+        }
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: var(--h1-font-size);
+    }
+    
+    h2 {
+        font-size: var(--h2-font-size);
+    }
+
+    h3 {
+        font-size: var(--h3-font-size);
+    }
+}
+
+@media (min-width: 992px) {
+    #sideNav {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-image: url("../images/sidebar-background.jpg");
+        background-blend-mode: luminosity;
+        display: flex;
+        flex-direction: column;
+        width: var(--sidebar-base-width);
+        height: 100vh;
+    }
+
+        #sideNav .navbar-brand {
+            display: flex;
+            margin: 1rem auto 3rem auto;
+            padding: 0.5rem;
+        }
+
+            #sideNav .navbar-brand .img-profile {
+                max-width: 15rem;
+                max-height: 15rem;
+                border: 0.5rem solid rgba(255, 255, 255, 0.4);
+            }
+
+            #sideNav .navbar-brand .name {
+                font-family: var(--headings-font-family);
+                font-weight: 400;
+                font-size: 3.5rem;
+                text-transform: uppercase;
+                color: var(--white);
+                margin: 0;
+                padding: 0;
+            }
+
+        #sideNav .navbar-collapse {
+            display: flex;
+            align-items: flex-start;
+            flex-grow: 0;
+            width: 100%;
+            margin-bottom: auto;
+        }
+
+            #sideNav .navbar-collapse .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+            }
+
+                #sideNav .navbar-collapse .navbar-nav .nav-item {
+                    display: block;
+                }
+
+                    #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+                        display: block;
+                    }
+}
+
+.social-icons {
+    text-align: center;
+}
+
+/* Skills list styling: make the area labels (strong) stand out */
+.skills ul.lead li {
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.skills ul.lead li strong {
+    display: inline-block;
+    min-width: 9rem; /* space for the label */
+    font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    .skills ul.lead li strong {
+        min-width: 6.5rem;
+    }
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 100%;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+    .social-icon:last-child {
+        margin-right: 0;
+    }
+
+    .social-icon:hover {
+        background-color: var(--white);
+        color: var(--primary);
+    }
+
+.dev-icons {
+    font-size: 3rem;
+}
+
+section.resume-section {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 60rem;
+}
+
+    section.resume-section .resume-section-content {
+        width: 100%;
+    }
+
+span.center {
+    text-align: center;
+}
+
+.img-profile {
+    max-width: 12rem;
+    max-height: 12rem;
+    border: 0.5rem solid rgba(43, 101, 163, 0.8);
+}
+
+@media (min-width: 768px) {
+    section.resume-section {
+        min-height: 100vh;
+    }
+}
+
+@media (min-width: 992px) {
+    section.resume-section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    hr.section {
+        max-width: 58rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
