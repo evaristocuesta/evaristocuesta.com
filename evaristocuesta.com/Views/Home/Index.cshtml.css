@@ -1,0 +1,90 @@
+﻿@charset "UTF-8";
+
+p.lead {
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.contact-info {
+    font-family: var(--headings-font-family);
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.profession {
+    font-family: var(--headings-font-family);
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.place {
+    font-family: var(--headings-font-family);
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.subheading {
+    font-family: var(--headings-font-family);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--gray-800);
+}
+
+.skills ul.lead li {
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.skills ul.lead li strong {
+    display: inline-block;
+    min-width: 9rem; /* space for the label */
+    font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    .skills ul.lead li strong {
+        min-width: 6.5rem;
+    }
+}
+
+section.resume-section {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 60rem;
+}
+
+section.resume-section .resume-section-content {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    section.resume-section {
+        min-height: 100vh;
+    }
+}
+
+@media (min-width: 992px) {
+    section.resume-section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    hr.section {
+        max-width: 58rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}

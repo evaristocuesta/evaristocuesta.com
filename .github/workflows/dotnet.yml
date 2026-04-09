@@ -41,11 +41,14 @@ jobs:
       run: dotnet publish --no-restore --configuration Release --output ./bin/publish
       working-directory: ./evaristocuesta.com
 
+    - name: Show publish output
+      run: ls -laR ./bin/publish || true
+      working-directory: ./evaristocuesta.com
+
     - name: Generate pages
-      # Run the published app so build-time generated assets (scoped CSS -> evaristocuesta.com.styles.css)
-      # are present when AspNetStatic generates the static site.
-      run: dotnet ./bin/publish/evaristocuesta.com.dll ssg ${{ github.workspace }}/web evaristocuesta.com
-      working-directory: ./evaristocuesta.com      
+      # Run the published app from the publish folder so the content root matches the published files
+      run: dotnet evaristocuesta.com.dll ssg ${{ github.workspace }}/web evaristocuesta.com
+      working-directory: ./evaristocuesta.com/bin/publish
 
     - name: Show generated files 
       run: ls -laR ${{ github.workspace }}/web || true
