@@ -44,9 +44,6 @@ jobs:
     - name: Show workspace files 
       run: ls -laR ${{ github.workspace }} || true
 
-    - name: Show generated files 
-      run: ls -laR ${{ github.workspace }}/web || true
-
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
