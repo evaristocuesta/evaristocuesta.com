@@ -36,6 +36,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UsePathBase(basePath);
 app.UseRouting();
 
 app.UseAuthorization();
