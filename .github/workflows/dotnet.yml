@@ -42,7 +42,7 @@ jobs:
       working-directory: ./evaristocuesta.com      
 
     - name: Show workspace files 
-      run: ls -laR ${{ github.workspace }} || true
+      run: ls -laR ${{ github.workspace }}/web || true
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
