@@ -13,7 +13,9 @@ if (args.HasSsgArg())
     builder.Services.AddSingleton<IStaticResourcesInfoProvider>(
         new StaticResourcesInfoProvider(
             [
-                new PageResource($"{basePath}/"), 
+                new PageResource($"{basePath}/"),
+                new PageResource($"{basePath}/privacy"),
+                new PageResource($"{basePath}/cookies"),
                 new CssResource($"{basePath}/css/site.css"),
                 new CssResource($"{basePath}/evaristocuesta.com.styles.css"),
                 new JsResource($"{basePath}/js/site.js"), 
@@ -49,6 +51,16 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
+
+app.MapControllerRoute(
+            name: "privacy",
+            pattern: "privacy",
+            defaults: new { controller = "Home", action = "Privacy" });
+
+app.MapControllerRoute(
+            name: "cookies",
+            pattern: "cookies",
+            defaults: new { controller = "Home", action = "Cookies" });
 
 if (args.HasSsgArg())
 {

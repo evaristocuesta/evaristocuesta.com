@@ -1,0 +1,41 @@
+﻿<!-- Cookie Consent Banner -->
+<div data-nosnippet id="cookieConsentBanner">
+    <p>
+        This website uses cookies to analyze traffic and improve your experience on our website. You can accept all cookies, reject them, or customize your preferences. For more information, please check our <a href="/cookies"><strong>Cookies Policy</strong></a> and our <a href="/privacy"><strong>Privacy Policy</strong></a>.
+    </p>
+
+    <!-- Aditional container to align checkboxs -->
+    <div class="cookie-group">
+        <div class="cookie-options">
+            <label for="preferencesCookie" class="custom-switch">
+                <input type="checkbox" id="preferencesCookie" name="preferences" />
+                <span class="switch-slider"></span>
+                <span class="option-text">Preferences</span>
+            </label>
+        </div>
+        <div class="cookie-options">
+            <label for="statisticalCookie" class="custom-switch">
+                <input type="checkbox" id="statisticalCookie" name="statistical" />
+                <span class="switch-slider"></span>
+                <span class="option-text">Statistical</span>
+            </label>
+        </div>
+        <div class="cookie-options">
+            <label for="marketingCookie" class="custom-switch">
+                <input type="checkbox" id="marketingCookie" name="marketing" />
+                <span class="switch-slider"></span>
+                <span class="option-text">Marketing</span>
+            </label>
+        </div>
+    </div>
+
+    <button onclick="setCookieConsent()" class="cookie-button cookie-button-preferences">Save Preferences</button>
+    <button onclick="rejectAll()" class="cookie-button">Reject All</button>
+    <button onclick="acceptAll()" class="cookie-button">Accept All</button>
+</div>
+
+
+<!-- Minimized Banner Button -->
+<div data-nosnippet id="minimizedConsentBanner">
+    <img alt="Cookies settings" src="~/images/cookie-color.svg" />
+</div>

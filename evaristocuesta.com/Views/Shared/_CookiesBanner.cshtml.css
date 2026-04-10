@@ -1,0 +1,127 @@
+﻿/*** Cookies styles ***/
+#cookieConsentBanner {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    z-index: 9999;
+}
+
+#minimizedConsentBanner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #f4f4f4;
+    padding: 1px 5px 5px 5px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+    width: 30px;
+    height: 30px;
+}
+
+#minimizedConsentBanner img {
+    vertical-align: top;
+}
+
+/* Container to centar the group but align checkboxs to the left */
+.cookie-group {
+    display: flex;
+    flex-direction: column; /* vertical aligment*/
+    align-items: flex-start; /* Align checkboxs to the left */
+    margin: 0px auto; /* Center the group in the banner */
+    width: fit-content; /* Fit to content */
+}
+
+.cookie-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.custom-switch {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.switch-slider {
+    width: 50px;
+    height: 26px;
+    background: grey;
+    display: inline-block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.switch-slider:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked + .switch-slider {
+    background: #5599ff;
+}
+
+    input:checked + .switch-slider:after {
+        left: calc(100% - 4px);
+        transform: translateX(-100%);
+    }
+
+.option-text {
+    font-size: 16px;
+}
+/* Buttons styles */
+.cookie-button {
+    cursor: pointer;
+    width: 200px;
+    height: 36px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    margin: 10px;
+    position: relative;
+    transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #5599ff;
+}
+
+.cookie-button-preferences {
+    border: solid;
+    border-width: 2px;
+    color: #5599ff;
+    background: #fff;
+}
+
+.cookie-button:hover {
+    background: #2a6bb8;
+}
+
+.cookie-button:active {
+    background: #2a6bb8;
+}
+/*** Cookies styles ***/
