@@ -3,6 +3,28 @@ window.dataLayer = window.dataLayer || [];
 
 window.addEventListener('DOMContentLoaded', event => {
 
+    navbarSetup();
+    contactInfo();
+    cookiesSetup();
+});
+
+function contactInfo() {
+    const emailAdress = atob('Y29udGFjdEBldmFyaXN0b2N1ZXN0YS5jb20=');
+    const emails = document.querySelectorAll('a.email-contact-info');
+    emails.forEach(email => {
+        email.children[1].innerHTML = emailAdress;
+        email.setAttribute('href', 'mailto:' + emailAdress);
+    });
+
+    const phoneNumber = atob('KzM0IDYzNyA1MyA0NSA2MQ==');
+    const phones = document.querySelectorAll('a.phone-contact-info');
+    phones.forEach(phone => {
+        phone.children[1].innerHTML = phoneNumber;
+        phone.setAttribute('href', 'tel:' + phoneNumber);
+    });
+}
+
+function navbarSetup() {
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
     if (sideNav) {
@@ -43,9 +65,9 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     }
+}
 
-    contactInfo();
-
+function cookiesSetup() {
     var cookieValue = readCookie('cookieConsent');
 
     if (cookieValue) {
@@ -60,21 +82,49 @@ window.addEventListener('DOMContentLoaded', event => {
 
     document.getElementById('minimizedConsentBanner').onclick = openConsentBanner;
     document.getElementById('minimizedConsentBanner').onkeydown = openConsentBanner;
-});
 
-function contactInfo() {
-    const emailAdress = atob('Y29udGFjdEBldmFyaXN0b2N1ZXN0YS5jb20=');
-    const emails = document.querySelectorAll('a.email-contact-info');
-    emails.forEach(email => {
-        email.children[1].innerHTML = emailAdress;
-        email.setAttribute('href', 'mailto:' + emailAdress);
+    // Obtener elementos
+    const btnPrivacy = document.getElementById('btn-privacy');
+    const btnCookies = document.getElementById('btn-cookies');
+    const popupPrivacy = document.getElementById('popup-privacy');
+    const popupCookies = document.getElementById('popup-cookies');
+    const closeButtons = document.querySelectorAll('.popup-close');
+
+    // Abrir popup de privacidad
+    btnPrivacy.addEventListener('click', (e) => {
+        e.preventDefault();
+        popupPrivacy.classList.add('active');
     });
 
-    const phoneNumber = atob('KzM0IDYzNyA1MyA0NSA2MQ==');
-    const phones = document.querySelectorAll('a.phone-contact-info');
-    phones.forEach(phone => {
-        phone.children[1].innerHTML = phoneNumber;
-        phone.setAttribute('href', 'tel:' + phoneNumber);
+    // Abrir popup de cookies
+    btnCookies.addEventListener('click', (e) => {
+        e.preventDefault();
+        popupCookies.classList.add('active');
+    });
+
+    // Cerrar popups con el botón X
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            popupPrivacy.classList.remove('active');
+            popupCookies.classList.remove('active');
+        });
+    });
+
+    // Cerrar popup al hacer clic fuera del contenido
+    [popupPrivacy, popupCookies].forEach(popup => {
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.classList.remove('active');
+            }
+        });
+    });
+
+    // Cerrar popup con la tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            popupPrivacy.classList.remove('active');
+            popupCookies.classList.remove('active');
+        }
     });
 }
 

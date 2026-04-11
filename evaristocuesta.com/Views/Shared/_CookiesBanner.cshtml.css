@@ -125,3 +125,66 @@ input:checked + .switch-slider {
     background: #2a6bb8;
 }
 /*** Cookies styles ***/
+
+/* Popup Overlay */
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    z-index: 10000; /* Above the cookie banner */
+    justify-content: center;
+    align-items: center;
+}
+
+    .popup-overlay.active {
+        display: flex; /* Shown when active */
+    }
+
+/* Popup Content */
+.popup-content {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    max-width: 900px;
+    max-height: 80vh;
+    width: 90%;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Scroll if content is too long */
+}
+
+/* Close Button */
+.popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+    .popup-close:hover {
+        color: #000;
+    }
+
+/* Popup Title */
+.popup-content h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-right: 2rem; /* Space for the close button */
+}
+
+/* Popup Body */
+.popup-body {
+    line-height: 1.6;
+}
