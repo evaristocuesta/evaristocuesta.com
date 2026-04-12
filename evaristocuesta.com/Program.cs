@@ -21,6 +21,7 @@ if (args.HasSsgArg())
                 new BinResource($"{basePath}/images/meta-image.jpg"),
                 new BinResource($"{basePath}/images/profile.jpg"),
                 new BinResource($"{basePath}/images/sidebar-background.jpg"),
+                new BinResource($"{basePath}/images/cookie-color.jpg"),
                 new PageResource($"{basePath}/robots.txt"),
                 new PageResource($"{basePath}/sitemap.xml"),
             ]
