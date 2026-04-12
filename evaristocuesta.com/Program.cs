@@ -14,8 +14,6 @@ if (args.HasSsgArg())
         new StaticResourcesInfoProvider(
             [
                 new PageResource($"{basePath}/"),
-                new PageResource($"{basePath}/privacy"),
-                new PageResource($"{basePath}/cookies"),
                 new CssResource($"{basePath}/css/site.css"),
                 new CssResource($"{basePath}/evaristocuesta.com.styles.css"),
                 new JsResource($"{basePath}/js/site.js"), 
