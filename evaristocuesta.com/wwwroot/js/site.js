@@ -75,6 +75,11 @@ function cookiesSetup() {
         document.getElementById('preferencesCookie').checked = cookieValue.includes('Preferences');
         document.getElementById('statisticalCookie').checked = cookieValue.includes('Statistical');
         document.getElementById('marketingCookie').checked = cookieValue.includes('Marketing');
+
+        // Restore consent in Google Consent Mode
+        var consentValues = cookieValue.split(',');
+        updateConsentMode(consentValues);
+
         showMinimizedBanner();
     } else {
         document.getElementById('cookieConsentBanner').style.display = 'block';
@@ -151,7 +156,6 @@ function readCookie(name) {
 }
 
 function setCookieConsent() {
-
     var consentValues = ['Necessary']; // Necessary cookies are always accepted.
 
     if (document.getElementById('preferencesCookie').checked) {
@@ -171,6 +175,9 @@ function setCookieConsent() {
     if (consentValue !== existingConsent) {
         setCookie('cookieConsent', consentValue, 365);
 
+        // Update Google Consent Mode v2
+        updateConsentMode(consentValues);
+
         window.dataLayer.push({
             'event': 'cookie_consent_update',
             'cookieConsent': consentValue
@@ -179,6 +186,25 @@ function setCookieConsent() {
 
     hideConsentBanner();
     showMinimizedBanner();
+}
+
+function updateConsentMode(consentValues) {
+    // Helper function for gtag
+    function gtag() { dataLayer.push(arguments); }
+
+    // Mapping your categories to Google Consent Mode v2 categories
+    var consentUpdate = {
+        'ad_storage': consentValues.includes('Marketing') ? 'granted' : 'denied',
+        'ad_user_data': consentValues.includes('Marketing') ? 'granted' : 'denied',
+        'ad_personalization': consentValues.includes('Marketing') ? 'granted' : 'denied',
+        'analytics_storage': consentValues.includes('Statistical') ? 'granted' : 'denied',
+        'functionality_storage': consentValues.includes('Preferences') ? 'granted' : 'denied',
+        'personalization_storage': consentValues.includes('Preferences') ? 'granted' : 'denied',
+        'security_storage': 'granted'  // Siempre permitido
+    };
+
+    // Update the consent
+    gtag('consent', 'update', consentUpdate);
 }
 
 function hideConsentBanner() {
