@@ -13,7 +13,7 @@ if (args.HasSsgArg())
     builder.Services.AddSingleton<IStaticResourcesInfoProvider>(
         new StaticResourcesInfoProvider(
             [
-                new PageResource($"{basePath}/"), 
+                new PageResource($"{basePath}/"),
                 new CssResource($"{basePath}/css/site.css"),
                 new CssResource($"{basePath}/evaristocuesta.com.styles.css"),
                 new JsResource($"{basePath}/js/site.js"), 

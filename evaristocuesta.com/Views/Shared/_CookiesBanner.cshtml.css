@@ -1,0 +1,190 @@
+﻿/*** Cookies styles ***/
+#cookieConsentBanner {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    z-index: 9999;
+}
+
+#minimizedConsentBanner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #f4f4f4;
+    padding: 1px 5px 5px 5px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+    width: 30px;
+    height: 30px;
+}
+
+#minimizedConsentBanner img {
+    vertical-align: top;
+}
+
+/* Container to centar the group but align checkboxs to the left */
+.cookie-group {
+    display: flex;
+    flex-direction: column; /* vertical aligment*/
+    align-items: flex-start; /* Align checkboxs to the left */
+    margin: 0px auto; /* Center the group in the banner */
+    width: fit-content; /* Fit to content */
+}
+
+.cookie-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.custom-switch {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.switch-slider {
+    width: 50px;
+    height: 26px;
+    background: grey;
+    display: inline-block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.switch-slider:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked + .switch-slider {
+    background: #5599ff;
+}
+
+    input:checked + .switch-slider:after {
+        left: calc(100% - 4px);
+        transform: translateX(-100%);
+    }
+
+.option-text {
+    font-size: 16px;
+}
+/* Buttons styles */
+.cookie-button {
+    cursor: pointer;
+    width: 200px;
+    height: 36px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    margin: 10px;
+    position: relative;
+    transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #5599ff;
+}
+
+.cookie-button-preferences {
+    border: solid;
+    border-width: 2px;
+    color: #5599ff;
+    background: #fff;
+}
+
+.cookie-button:hover {
+    background: #2a6bb8;
+}
+
+.cookie-button:active {
+    background: #2a6bb8;
+}
+/*** Cookies styles ***/
+
+/* Popup Overlay */
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    z-index: 10000; /* Above the cookie banner */
+    justify-content: center;
+    align-items: center;
+}
+
+    .popup-overlay.active {
+        display: flex; /* Shown when active */
+    }
+
+/* Popup Content */
+.popup-content {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    max-width: 900px;
+    max-height: 80vh;
+    width: 90%;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Scroll if content is too long */
+}
+
+/* Close Button */
+.popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+    .popup-close:hover {
+        color: #000;
+    }
+
+/* Popup Title */
+.popup-content h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-right: 2rem; /* Space for the close button */
+}
+
+/* Popup Body */
+.popup-body {
+    line-height: 1.6;
+}
