@@ -50,16 +50,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
-app.MapControllerRoute(
-            name: "privacy",
-            pattern: "privacy",
-            defaults: new { controller = "Home", action = "Privacy" });
-
-app.MapControllerRoute(
-            name: "cookies",
-            pattern: "cookies",
-            defaults: new { controller = "Home", action = "Cookies" });
-
 if (args.HasSsgArg())
 {
     if (!Path.Exists(outputPath))
