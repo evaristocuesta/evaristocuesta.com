@@ -175,6 +175,9 @@ function setCookieConsent() {
     if (consentValue !== existingConsent) {
         setCookie('cookieConsent', consentValue, 365);
 
+        // Cleanup cookies that are no longer consented to
+        cleanupCookies(consentValues);
+
         // Update Google Consent Mode v2
         updateConsentMode(consentValues);
 
@@ -232,4 +235,59 @@ function rejectAll() {
 function openConsentBanner() {
     document.getElementById('cookieConsentBanner').style.display = 'block';
     document.getElementById('minimizedConsentBanner').style.display = 'none';
+}
+
+function deleteCookie(name) {
+    // Delete cookie in the current domain
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+
+    // Delete cookie by specifying the domain explicitly
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + window.location.hostname + ';';
+
+    // If the domain has subdomains, also try deleting with a leading dot
+    if (window.location.hostname.indexOf('.') > -1) {
+        var rootDomain = '.' + window.location.hostname.split('.').slice(-2).join('.');
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + rootDomain + ';';
+    }
+}
+
+function cleanupCookies(consentValues) {
+    // List of cookies belonging to each category
+    var cookieCategories = {
+        'Preferences': [
+            // Add your preference cookies here
+            // Example: 'language_preference', 'theme_preference'
+        ],
+        'Statistical': [
+            // Google Analytics cookies
+            '_ga',
+            '_ga_' + 'G-WF4VGXW0YR'.split('-')[1],
+            '_gid',
+            '_gat',
+            '_gat_gtag_' + 'G-WF4VGXW0YR'.replace(/-/g, '_'), 
+        ],
+        'Marketing': [
+            // Marketing/advertising cookies
+            '_gcl_au',
+            '_fbp',
+            '_ttp',
+            // Google Ads
+            'test_cookie',
+            'IDE',
+            'DSID',
+            'id',
+            '1P_JAR',
+            'CONSENT',
+            'NID',
+        ]
+    };
+
+    // Delete cookies of categories not accepted
+    for (var category in cookieCategories) {
+        if (!consentValues.includes(category)) {
+            cookieCategories[category].forEach(function (cookieName) {
+                deleteCookie(cookieName);
+            });
+        }
+    }
 }
