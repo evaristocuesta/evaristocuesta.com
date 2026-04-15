@@ -88,26 +88,26 @@ function cookiesSetup() {
     document.getElementById('minimizedConsentBanner').onclick = openConsentBanner;
     document.getElementById('minimizedConsentBanner').onkeydown = openConsentBanner;
 
-    // Obtener elementos
+    // Get elements for popups
     const btnPrivacy = document.getElementById('btn-privacy');
     const btnCookies = document.getElementById('btn-cookies');
     const popupPrivacy = document.getElementById('popup-privacy');
     const popupCookies = document.getElementById('popup-cookies');
     const closeButtons = document.querySelectorAll('.popup-close');
 
-    // Abrir popup de privacidad
+    // Open privacy popup
     btnPrivacy.addEventListener('click', (e) => {
         e.preventDefault();
         popupPrivacy.classList.add('active');
     });
 
-    // Abrir popup de cookies
+    // Open cookies popup
     btnCookies.addEventListener('click', (e) => {
         e.preventDefault();
         popupCookies.classList.add('active');
     });
 
-    // Cerrar popups con el botón X
+    // Close popups with the X button
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
             popupPrivacy.classList.remove('active');
@@ -115,7 +115,7 @@ function cookiesSetup() {
         });
     });
 
-    // Cerrar popup al hacer clic fuera del contenido
+    // Close popup when clicking outside of the content
     [popupPrivacy, popupCookies].forEach(popup => {
         popup.addEventListener('click', (e) => {
             if (e.target === popup) {
@@ -124,7 +124,7 @@ function cookiesSetup() {
         });
     });
 
-    // Cerrar popup con la tecla ESC
+    // Close popup with the ESC key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             popupPrivacy.classList.remove('active');

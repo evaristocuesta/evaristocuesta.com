@@ -1,6 +1,23 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+            // Initialize dataLayer
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+
+            // Set default consent state (denied)
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'analytics_storage': 'denied',
+              'functionality_storage': 'denied',
+              'personalization_storage': 'denied',
+              'security_storage': 'granted',  // Always allowed (necessary cookies)
+              'wait_for_update': 500  // Wait 500ms before loading tags
+            });
+    </script>
     <!-- Google Tag Manager -->
     <script>
                 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
