@@ -74,8 +74,60 @@ h3 {
     text-transform: uppercase;
 }
 
+#sideNav .navbar-toggler {
+    border: none;
+}
+
 #sideNav .navbar-toggler:focus {
-    outline-color: rgba(75, 139, 208, 1);
+    outline: none;
+    box-shadow: none;
+}
+
+/* Mobile fullscreen navbar with centered items - only when expanded */
+@media (max-width: 991px) {
+    #sideNav .navbar-brand,
+    #sideNav .navbar-toggler {
+        position: relative;
+        z-index: 1051;
+    }
+
+    #sideNav .navbar-collapse.show {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--primary);
+        z-index: 1050;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        padding-top: 5rem;
+    }
+
+    #sideNav .navbar-collapse.collapsing {
+        transition: none;
+    }
+
+    #sideNav .navbar-collapse.show .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+
+    #sideNav .navbar-collapse.show .navbar-nav .nav-item {
+        margin: 1rem 0;
+    }
+
+    #sideNav .navbar-collapse.show .navbar-nav .nav-item .nav-link {
+        font-size: 1.5rem;
+        color: var(--white);
+    }
+
+    #sideNav .navbar-collapse.show .social-icons {
+        margin-top: 2rem;
+    }
 }
 
 #sideNav .navbar-brand h2,
